@@ -1,10 +1,8 @@
-Abe with Yacoin support, forked from https://github.com/CryptoManiac/bitcoin-abe.git
+Abe with Arcoin support, forked from https://github.com/saironiq/yacoin-abe
 
 Donations welcome at:
 
-  BTC: 1KS4t9k5oGWUuCKhgUgivUPojh8V7ZFyzr
-
-  YAC: YC83VqhfWWSJ1AmWcTsnssfTuqnENc86A7
+  ARC: AmNdRhemshq46AfiB69PG2N9RM47qYW8kD
 
 Welcome to Abe!
 ===============

@@ -37,16 +37,15 @@ import base58
 
 __version__ = version.__version__
 
-ABE_APPNAME = "Yacoin"
+ABE_APPNAME = "Arcoin"
 ABE_VERSION = __version__
-ABE_URL = 'https://github.com/saironiq/yacoin-abe'
+ABE_URL = 'https://github.com/flywalk/arcoin-abe'
 
-COPYRIGHT_YEARS = '2013'
-COPYRIGHT = "Sairon Istyar"
-COPYRIGHT_URL = "mailto:saironiq@gmail.com"
+COPYRIGHT_YEARS = '2014'
+COPYRIGHT = "Xinglong Liao"
+COPYRIGHT_URL = "xinglong.liao@gmail.com"
 
-DONATIONS_BTC = '1KS4t9k5oGWUuCKhgUgivUPojh8V7ZFyzr'
-DONATIONS_YAC = 'YC83VqhfWWSJ1AmWcTsnssfTuqnENc86A7'
+DONATIONS_ARC = 'AmNdRhemshq46AfiB69PG2N9RM47qYW8kD'
 
 # Abe-generated content should all be valid HTML and XHTML fragments.
 # Configurable templates may contain either.  HTML seems better supported
@@ -67,15 +66,14 @@ DEFAULT_TEMPLATE = """
     </h1>
     %(body)s
     <p><a href="%(dotdot)sq">API</a> (machine-readable pages)</p>
-    <p>NEW! => <a href="/graphs.htm">Yacoin Network Graphs</a></p>
+    <p>NEW! => <a href="/graphs.htm">Arcoin Network Graphs</a></p>
     <p style="font-size: smaller">
         <span style="font-style: italic">
             Powered by <a href="%(ABE_URL)s">Abe</a>
         </span>
         %(download)s
         Tips appreciated!
-        <a href="%(dotdot)saddress/%(DONATIONS_BTC)s">BTC</a>
-        <a href="%(dotdot)saddress/%(DONATIONS_YAC)s">YAC</a>
+        <a href="%(dotdot)saddress/%(DONATIONS_ARC)s">ARC</a>
     </p>
 </body>
 </html>
@@ -703,8 +701,8 @@ class Abe:
                    fees = format_satoshis(fees, chain)
                    body += ['Generation: ', gen , ' Total']
                    page['h1'] = ['<a href="', page['dotdot'], 'chain/',
-                                 escape('Yacoin'), '?hi=', height, '">',
-                                 escape('Yacoin'), '</a> ', height,'<br />','<FONT SIZE="-1">Proof of Work; ',
+                                 escape('Arcoin'), '?hi=', height, '">',
+                                 escape('Arcoin'), '</a> ', height,'<br />','<FONT SIZE="-1">Proof of Work; ',
                                  gen,' Coins generated </FONT>']
             else:
                 for txin in tx['in']:
@@ -729,8 +727,8 @@ class Abe:
                pos = body.index(' Total')
                body.insert(pos,txt)
                page['h1'] = ['<a href="', page['dotdot'], 'chain/',
-                             escape('Yacoin'), '?hi=', height, '">',
-                             escape('Yacoin'), '</a> ', height,'<br />','<FONT COLOR="FF0000"><FONT SIZE="-1">Proof of Stake; </FONT></FONT>',
+                             escape('Arcoin'), '?hi=', height, '">',
+                             escape('Arcoin'), '</a> ', height,'<br />','<FONT COLOR="FF0000"><FONT SIZE="-1">Proof of Stake; </FONT></FONT>',
                              '<FONT SIZE="-1">',posgen, ' Coins generated</FONT>','\n']
 
         body += '</table>\n'
@@ -2376,8 +2374,7 @@ def main(argv):
             "COPYRIGHT": COPYRIGHT,
             "COPYRIGHT_YEARS": COPYRIGHT_YEARS,
             "COPYRIGHT_URL": COPYRIGHT_URL,
-            "DONATIONS_BTC": DONATIONS_BTC,
-            "DONATIONS_YAC": DONATIONS_YAC,
+            "DONATIONS_ARC": DONATIONS_ARC,
             "CONTENT_TYPE": DEFAULT_CONTENT_TYPE,
             },
         }
